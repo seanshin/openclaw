@@ -1,5 +1,7 @@
 # 🦞 OpenClaw — Personal AI Assistant
 
+> **📋 복제본** — 이 저장소는 [openclaw/openclaw](https://github.com/openclaw/openclaw)의 복제본입니다. 원본 프로젝트는 [openclaw.ai](https://openclaw.ai)에서 제공합니다.
+
 <p align="center">
     <picture>
         <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text-dark.png">
@@ -18,32 +20,32 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License"></a>
 </p>
 
-**OpenClaw** is a _personal AI assistant_ you run on your own devices.
-It answers you on the channels you already use (WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, Microsoft Teams, WebChat), plus extension channels like BlueBubbles, Matrix, Zalo, and Zalo Personal. It can speak and listen on macOS/iOS/Android, and can render a live Canvas you control. The Gateway is just the control plane — the product is the assistant.
+**OpenClaw**는 사용자 자신의 기기에서 돌리는 _개인용 AI 어시스턴트_입니다.
+이미 쓰는 채널(WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, Microsoft Teams, WebChat)과 BlueBubbles, Matrix, Zalo, Zalo Personal 같은 확장 채널에서 응답합니다. macOS/iOS/Android에서 음성으로 말하고 들을 수 있으며, 사용자가 제어하는 라이브 Canvas를 띄울 수 있습니다. Gateway는 제어 평면일 뿐이며, 제품의 핵심은 어시스턴트입니다.
 
-If you want a personal, single-user assistant that feels local, fast, and always-on, this is it.
+로컬에서 빠르고 항상 켜져 있는 느낌의 개인·단일 사용자 어시스턴트를 원한다면 이걸 쓰면 됩니다.
 
-[Website](https://openclaw.ai) · [Docs](https://docs.openclaw.ai) · [DeepWiki](https://deepwiki.com/openclaw/openclaw) · [Getting Started](https://docs.openclaw.ai/start/getting-started) · [Updating](https://docs.openclaw.ai/install/updating) · [Showcase](https://docs.openclaw.ai/start/showcase) · [FAQ](https://docs.openclaw.ai/start/faq) · [Wizard](https://docs.openclaw.ai/start/wizard) · [Nix](https://github.com/openclaw/nix-clawdbot) · [Docker](https://docs.openclaw.ai/install/docker) · [Discord](https://discord.gg/clawd)
+[웹사이트](https://openclaw.ai) · [문서](https://docs.openclaw.ai) · [DeepWiki](https://deepwiki.com/openclaw/openclaw) · [시작하기](https://docs.openclaw.ai/start/getting-started) · [업데이트](https://docs.openclaw.ai/install/updating) · [쇼케이스](https://docs.openclaw.ai/start/showcase) · [FAQ](https://docs.openclaw.ai/start/faq) · [마법사](https://docs.openclaw.ai/start/wizard) · [Nix](https://github.com/openclaw/nix-clawdbot) · [Docker](https://docs.openclaw.ai/install/docker) · [Discord](https://discord.gg/clawd)
 
-Preferred setup: run the onboarding wizard (`openclaw onboard`). It walks through gateway, workspace, channels, and skills. The CLI wizard is the recommended path and works on **macOS, Linux, and Windows (via WSL2; strongly recommended)**.
-Works with npm, pnpm, or bun.
-New install? Start here: [Getting started](https://docs.openclaw.ai/start/getting-started)
+권장 설정: 온보딩 마법사를 실행하세요 (`openclaw onboard`). 게이트웨이, 워크스페이스, 채널, 스킬을 단계별로 안내합니다. CLI 마법사가 권장 경로이며 **macOS, Linux, Windows(WSL2 사용 시·강력 권장)**에서 동작합니다.
+npm, pnpm, bun 모두 사용 가능합니다.
+처음 설치하시나요? 여기서 시작하세요: [시작하기](https://docs.openclaw.ai/start/getting-started)
 
-**Subscriptions (OAuth):**
+**구독(OAuth):**
 
 - **[Anthropic](https://www.anthropic.com/)** (Claude Pro/Max)
 - **[OpenAI](https://openai.com/)** (ChatGPT/Codex)
 
-Model note: while any model is supported, I strongly recommend **Anthropic Pro/Max (100/200) + Opus 4.5** for long‑context strength and better prompt‑injection resistance. See [Onboarding](https://docs.openclaw.ai/start/onboarding).
+모델 참고: 모든 모델을 지원하지만, 긴 문맥과 프롬프트 인젝션 저항을 위해 **Anthropic Pro/Max(100/200) + Opus 4.5** 사용을 강력히 권장합니다. [온보딩](https://docs.openclaw.ai/start/onboarding) 참고.
 
-## Models (selection + auth)
+## 모델 (선택 및 인증)
 
-- Models config + CLI: [Models](https://docs.openclaw.ai/concepts/models)
-- Auth profile rotation (OAuth vs API keys) + fallbacks: [Model failover](https://docs.openclaw.ai/concepts/model-failover)
+- 모델 설정 및 CLI: [모델](https://docs.openclaw.ai/concepts/models)
+- 인증 프로필 순환(OAuth vs API 키) 및 폴백: [모델 장애 조치](https://docs.openclaw.ai/concepts/model-failover)
 
-## Install (recommended)
+## 설치 (권장)
 
-Runtime: **Node ≥22**.
+실행 환경: **Node ≥22**.
 
 ```bash
 npm install -g openclaw@latest
@@ -52,40 +54,40 @@ npm install -g openclaw@latest
 openclaw onboard --install-daemon
 ```
 
-The wizard installs the Gateway daemon (launchd/systemd user service) so it stays running.
+마법사는 Gateway 데몬(launchd/systemd 사용자 서비스)을 설치해 계속 실행되게 합니다.
 
-## Quick start (TL;DR)
+## 빠른 시작 (TL;DR)
 
-Runtime: **Node ≥22**.
+실행 환경: **Node ≥22**.
 
-Full beginner guide (auth, pairing, channels): [Getting started](https://docs.openclaw.ai/start/getting-started)
+초보자용 전체 가이드(인증, 페어링, 채널): [시작하기](https://docs.openclaw.ai/start/getting-started)
 
 ```bash
 openclaw onboard --install-daemon
 
 openclaw gateway --port 18789 --verbose
 
-# Send a message
+# 메시지 보내기
 openclaw message send --to +1234567890 --message "Hello from OpenClaw"
 
-# Talk to the assistant (optionally deliver back to any connected channel: WhatsApp/Telegram/Slack/Discord/Google Chat/Signal/iMessage/BlueBubbles/Microsoft Teams/Matrix/Zalo/Zalo Personal/WebChat)
+# 어시스턴트와 대화 (연결된 채널로 답장 가능: WhatsApp/Telegram/Slack/Discord/Google Chat/Signal/iMessage/BlueBubbles/Microsoft Teams/Matrix/Zalo/Zalo Personal/WebChat)
 openclaw agent --message "Ship checklist" --thinking high
 ```
 
-Upgrading? [Updating guide](https://docs.openclaw.ai/install/updating) (and run `openclaw doctor`).
+업그레이드할 때는 [업데이트 가이드](https://docs.openclaw.ai/install/updating)를 참고하고 `openclaw doctor`를 실행하세요.
 
-## Development channels
+## 개발 채널
 
-- **stable**: tagged releases (`vYYYY.M.D` or `vYYYY.M.D-<patch>`), npm dist-tag `latest`.
-- **beta**: prerelease tags (`vYYYY.M.D-beta.N`), npm dist-tag `beta` (macOS app may be missing).
-- **dev**: moving head of `main`, npm dist-tag `dev` (when published).
+- **stable**: 태그된 릴리스(`vYYYY.M.D` 또는 `vYYYY.M.D-<patch>`), npm dist-tag `latest`.
+- **beta**: 프리릴리스 태그(`vYYYY.M.D-beta.N`), npm dist-tag `beta` (macOS 앱이 없을 수 있음).
+- **dev**: `main` 최신 커밋, npm dist-tag `dev` (배포 시).
 
-Switch channels (git + npm): `openclaw update --channel stable|beta|dev`.
-Details: [Development channels](https://docs.openclaw.ai/install/development-channels).
+채널 전환(git + npm): `openclaw update --channel stable|beta|dev`.
+자세한 내용: [개발 채널](https://docs.openclaw.ai/install/development-channels).
 
-## From source (development)
+## 소스에서 빌드 (개발용)
 
-Prefer `pnpm` for builds from source. Bun is optional for running TypeScript directly.
+소스 빌드에는 `pnpm` 사용을 권장합니다. TypeScript 직접 실행에는 Bun을 선택적으로 쓸 수 있습니다.
 
 ```bash
 git clone https://github.com/openclaw/openclaw.git
@@ -101,82 +103,82 @@ pnpm openclaw onboard --install-daemon
 pnpm gateway:watch
 ```
 
-Note: `pnpm openclaw ...` runs TypeScript directly (via `tsx`). `pnpm build` produces `dist/` for running via Node / the packaged `openclaw` binary.
+참고: `pnpm openclaw ...`는 TypeScript를 직접 실행합니다(tsx 사용). `pnpm build`는 Node/패키지된 `openclaw` 바이너리용 `dist/`를 만듭니다.
 
-## Security defaults (DM access)
+## 보안 기본값 (DM 접근)
 
-OpenClaw connects to real messaging surfaces. Treat inbound DMs as **untrusted input**.
+OpenClaw는 실제 메시징 채널에 연결됩니다. 수신 DM은 **신뢰할 수 없는 입력**으로 취급하세요.
 
-Full security guide: [Security](https://docs.openclaw.ai/gateway/security)
+전체 보안 가이드: [보안](https://docs.openclaw.ai/gateway/security)
 
-Default behavior on Telegram/WhatsApp/Signal/iMessage/Microsoft Teams/Discord/Google Chat/Slack:
+Telegram/WhatsApp/Signal/iMessage/Microsoft Teams/Discord/Google Chat/Slack 기본 동작:
 
-- **DM pairing** (`dmPolicy="pairing"` / `channels.discord.dm.policy="pairing"` / `channels.slack.dm.policy="pairing"`): unknown senders receive a short pairing code and the bot does not process their message.
-- Approve with: `openclaw pairing approve <channel> <code>` (then the sender is added to a local allowlist store).
-- Public inbound DMs require an explicit opt-in: set `dmPolicy="open"` and include `"*"` in the channel allowlist (`allowFrom` / `channels.discord.dm.allowFrom` / `channels.slack.dm.allowFrom`).
+- **DM 페어링** (`dmPolicy="pairing"` / `channels.discord.dm.policy="pairing"` / `channels.slack.dm.policy="pairing"`): 알 수 없는 발신자에게 짧은 페어링 코드가 전달되며, 봇은 해당 메시지를 처리하지 않습니다.
+- 승인: `openclaw pairing approve <channel> <code>` (승인 후 발신자가 로컬 허용 목록에 추가됨).
+- 공개 수신 DM은 명시적 옵트인 필요: `dmPolicy="open"`으로 설정하고 채널 허용 목록(`allowFrom` / `channels.discord.dm.allowFrom` / `channels.slack.dm.allowFrom`)에 `"*"`를 넣으세요.
 
-Run `openclaw doctor` to surface risky/misconfigured DM policies.
+위험하거나 잘못 설정된 DM 정책을 확인하려면 `openclaw doctor`를 실행하세요.
 
-## Highlights
+## 하이라이트
 
-- **[Local-first Gateway](https://docs.openclaw.ai/gateway)** — single control plane for sessions, channels, tools, and events.
-- **[Multi-channel inbox](https://docs.openclaw.ai/channels)** — WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, BlueBubbles, Microsoft Teams, Matrix, Zalo, Zalo Personal, WebChat, macOS, iOS/Android.
-- **[Multi-agent routing](https://docs.openclaw.ai/gateway/configuration)** — route inbound channels/accounts/peers to isolated agents (workspaces + per-agent sessions).
-- **[Voice Wake](https://docs.openclaw.ai/nodes/voicewake) + [Talk Mode](https://docs.openclaw.ai/nodes/talk)** — always-on speech for macOS/iOS/Android with ElevenLabs.
-- **[Live Canvas](https://docs.openclaw.ai/platforms/mac/canvas)** — agent-driven visual workspace with [A2UI](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui).
-- **[First-class tools](https://docs.openclaw.ai/tools)** — browser, canvas, nodes, cron, sessions, and Discord/Slack actions.
-- **[Companion apps](https://docs.openclaw.ai/platforms/macos)** — macOS menu bar app + iOS/Android [nodes](https://docs.openclaw.ai/nodes).
-- **[Onboarding](https://docs.openclaw.ai/start/wizard) + [skills](https://docs.openclaw.ai/tools/skills)** — wizard-driven setup with bundled/managed/workspace skills.
+- **[로컬 우선 Gateway](https://docs.openclaw.ai/gateway)** — 세션, 채널, 도구, 이벤트를 위한 단일 제어 평면.
+- **[다중 채널 인박스](https://docs.openclaw.ai/channels)** — WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, BlueBubbles, Microsoft Teams, Matrix, Zalo, Zalo Personal, WebChat, macOS, iOS/Android.
+- **[다중 에이전트 라우팅](https://docs.openclaw.ai/gateway/configuration)** — 수신 채널/계정/피어를 격리된 에이전트(워크스페이스 및 에이전트별 세션)로 라우팅.
+- **[Voice Wake](https://docs.openclaw.ai/nodes/voicewake) + [Talk Mode](https://docs.openclaw.ai/nodes/talk)** — ElevenLabs 연동 macOS/iOS/Android 상시 음성.
+- **[Live Canvas](https://docs.openclaw.ai/platforms/mac/canvas)** — [A2UI](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui) 기반 에이전트 주도 시각 작업 공간.
+- **[1급 도구](https://docs.openclaw.ai/tools)** — 브라우저, 캔버스, 노드, cron, 세션, Discord/Slack 액션.
+- **[동반 앱](https://docs.openclaw.ai/platforms/macos)** — macOS 메뉴 바 앱 + iOS/Android [노드](https://docs.openclaw.ai/nodes).
+- **[온보딩](https://docs.openclaw.ai/start/wizard) + [스킬](https://docs.openclaw.ai/tools/skills)** — 번들/관리/워크스페이스 스킬을 위한 마법사 기반 설정.
 
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=openclaw/openclaw&type=date&legend=top-left)](https://www.star-history.com/#openclaw/openclaw&type=date&legend=top-left)
 
-## Everything we built so far
+## 지금까지 구현한 것
 
-### Core platform
+### 핵심 플랫폼
 
-- [Gateway WS control plane](https://docs.openclaw.ai/gateway) with sessions, presence, config, cron, webhooks, [Control UI](https://docs.openclaw.ai/web), and [Canvas host](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui).
-- [CLI surface](https://docs.openclaw.ai/tools/agent-send): gateway, agent, send, [wizard](https://docs.openclaw.ai/start/wizard), and [doctor](https://docs.openclaw.ai/gateway/doctor).
-- [Pi agent runtime](https://docs.openclaw.ai/concepts/agent) in RPC mode with tool streaming and block streaming.
-- [Session model](https://docs.openclaw.ai/concepts/session): `main` for direct chats, group isolation, activation modes, queue modes, reply-back. Group rules: [Groups](https://docs.openclaw.ai/concepts/groups).
-- [Media pipeline](https://docs.openclaw.ai/nodes/images): images/audio/video, transcription hooks, size caps, temp file lifecycle. Audio details: [Audio](https://docs.openclaw.ai/nodes/audio).
+- 세션, 프레즌스, 설정, cron, 웹훅, [Control UI](https://docs.openclaw.ai/web), [Canvas 호스트](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui)를 갖춘 [Gateway WS 제어 평면](https://docs.openclaw.ai/gateway).
+- [CLI](https://docs.openclaw.ai/tools/agent-send): gateway, agent, send, [마법사](https://docs.openclaw.ai/start/wizard), [doctor](https://docs.openclaw.ai/gateway/doctor).
+- 도구 스트리밍·블록 스트리밍이 있는 RPC 모드 [Pi 에이전트 런타임](https://docs.openclaw.ai/concepts/agent).
+- [세션 모델](https://docs.openclaw.ai/concepts/session): 직접 채팅용 `main`, 그룹 격리, 활성화 모드, 큐 모드, 답장. 그룹 규칙: [그룹](https://docs.openclaw.ai/concepts/groups).
+- [미디어 파이프라인](https://docs.openclaw.ai/nodes/images): 이미지/오디오/비디오, 전사 훅, 크기 제한, 임시 파일 생명 주기. 오디오 상세: [오디오](https://docs.openclaw.ai/nodes/audio).
 
-### Channels
+### 채널
 
-- [Channels](https://docs.openclaw.ai/channels): [WhatsApp](https://docs.openclaw.ai/channels/whatsapp) (Baileys), [Telegram](https://docs.openclaw.ai/channels/telegram) (grammY), [Slack](https://docs.openclaw.ai/channels/slack) (Bolt), [Discord](https://docs.openclaw.ai/channels/discord) (discord.js), [Google Chat](https://docs.openclaw.ai/channels/googlechat) (Chat API), [Signal](https://docs.openclaw.ai/channels/signal) (signal-cli), [iMessage](https://docs.openclaw.ai/channels/imessage) (imsg), [BlueBubbles](https://docs.openclaw.ai/channels/bluebubbles) (extension), [Microsoft Teams](https://docs.openclaw.ai/channels/msteams) (extension), [Matrix](https://docs.openclaw.ai/channels/matrix) (extension), [Zalo](https://docs.openclaw.ai/channels/zalo) (extension), [Zalo Personal](https://docs.openclaw.ai/channels/zalouser) (extension), [WebChat](https://docs.openclaw.ai/web/webchat).
-- [Group routing](https://docs.openclaw.ai/concepts/group-messages): mention gating, reply tags, per-channel chunking and routing. Channel rules: [Channels](https://docs.openclaw.ai/channels).
+- [채널](https://docs.openclaw.ai/channels): [WhatsApp](https://docs.openclaw.ai/channels/whatsapp)(Baileys), [Telegram](https://docs.openclaw.ai/channels/telegram)(grammY), [Slack](https://docs.openclaw.ai/channels/slack)(Bolt), [Discord](https://docs.openclaw.ai/channels/discord)(discord.js), [Google Chat](https://docs.openclaw.ai/channels/googlechat)(Chat API), [Signal](https://docs.openclaw.ai/channels/signal)(signal-cli), [iMessage](https://docs.openclaw.ai/channels/imessage)(imsg), [BlueBubbles](https://docs.openclaw.ai/channels/bluebubbles)(확장), [Microsoft Teams](https://docs.openclaw.ai/channels/msteams)(확장), [Matrix](https://docs.openclaw.ai/channels/matrix)(확장), [Zalo](https://docs.openclaw.ai/channels/zalo)(확장), [Zalo Personal](https://docs.openclaw.ai/channels/zalouser)(확장), [WebChat](https://docs.openclaw.ai/web/webchat).
+- [그룹 라우팅](https://docs.openclaw.ai/concepts/group-messages): 멘션 게이팅, 답장 태그, 채널별 청킹·라우팅. 채널 규칙: [채널](https://docs.openclaw.ai/channels).
 
-### Apps + nodes
+### 앱 + 노드
 
-- [macOS app](https://docs.openclaw.ai/platforms/macos): menu bar control plane, [Voice Wake](https://docs.openclaw.ai/nodes/voicewake)/PTT, [Talk Mode](https://docs.openclaw.ai/nodes/talk) overlay, [WebChat](https://docs.openclaw.ai/web/webchat), debug tools, [remote gateway](https://docs.openclaw.ai/gateway/remote) control.
-- [iOS node](https://docs.openclaw.ai/platforms/ios): [Canvas](https://docs.openclaw.ai/platforms/mac/canvas), [Voice Wake](https://docs.openclaw.ai/nodes/voicewake), [Talk Mode](https://docs.openclaw.ai/nodes/talk), camera, screen recording, Bonjour pairing.
-- [Android node](https://docs.openclaw.ai/platforms/android): [Canvas](https://docs.openclaw.ai/platforms/mac/canvas), [Talk Mode](https://docs.openclaw.ai/nodes/talk), camera, screen recording, optional SMS.
-- [macOS node mode](https://docs.openclaw.ai/nodes): system.run/notify + canvas/camera exposure.
+- [macOS 앱](https://docs.openclaw.ai/platforms/macos): 메뉴 바 제어, [Voice Wake](https://docs.openclaw.ai/nodes/voicewake)/PTT, [Talk Mode](https://docs.openclaw.ai/nodes/talk) 오버레이, [WebChat](https://docs.openclaw.ai/web/webchat), 디버그 도구, [원격 gateway](https://docs.openclaw.ai/gateway/remote) 제어.
+- [iOS 노드](https://docs.openclaw.ai/platforms/ios): [Canvas](https://docs.openclaw.ai/platforms/mac/canvas), [Voice Wake](https://docs.openclaw.ai/nodes/voicewake), [Talk Mode](https://docs.openclaw.ai/nodes/talk), 카메라, 화면 녹화, Bonjour 페어링.
+- [Android 노드](https://docs.openclaw.ai/platforms/android): [Canvas](https://docs.openclaw.ai/platforms/mac/canvas), [Talk Mode](https://docs.openclaw.ai/nodes/talk), 카메라, 화면 녹화, SMS(선택).
+- [macOS 노드 모드](https://docs.openclaw.ai/nodes): system.run/notify 및 canvas/카메라 노출.
 
-### Tools + automation
+### 도구 + 자동화
 
-- [Browser control](https://docs.openclaw.ai/tools/browser): dedicated openclaw Chrome/Chromium, snapshots, actions, uploads, profiles.
+- [브라우저 제어](https://docs.openclaw.ai/tools/browser): 전용 openclaw Chrome/Chromium, 스냅샷, 액션, 업로드, 프로필.
 - [Canvas](https://docs.openclaw.ai/platforms/mac/canvas): [A2UI](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui) push/reset, eval, snapshot.
-- [Nodes](https://docs.openclaw.ai/nodes): camera snap/clip, screen record, [location.get](https://docs.openclaw.ai/nodes/location-command), notifications.
-- [Cron + wakeups](https://docs.openclaw.ai/automation/cron-jobs); [webhooks](https://docs.openclaw.ai/automation/webhook); [Gmail Pub/Sub](https://docs.openclaw.ai/automation/gmail-pubsub).
-- [Skills platform](https://docs.openclaw.ai/tools/skills): bundled, managed, and workspace skills with install gating + UI.
+- [노드](https://docs.openclaw.ai/nodes): 카메라 스냅/클립, 화면 녹화, [location.get](https://docs.openclaw.ai/nodes/location-command), 알림.
+- [Cron + 웨이크업](https://docs.openclaw.ai/automation/cron-jobs); [웹훅](https://docs.openclaw.ai/automation/webhook); [Gmail Pub/Sub](https://docs.openclaw.ai/automation/gmail-pubsub).
+- [스킬 플랫폼](https://docs.openclaw.ai/tools/skills): 번들/관리/워크스페이스 스킬, 설치 게이팅 및 UI.
 
-### Runtime + safety
+### 런타임 + 안전
 
-- [Channel routing](https://docs.openclaw.ai/concepts/channel-routing), [retry policy](https://docs.openclaw.ai/concepts/retry), and [streaming/chunking](https://docs.openclaw.ai/concepts/streaming).
-- [Presence](https://docs.openclaw.ai/concepts/presence), [typing indicators](https://docs.openclaw.ai/concepts/typing-indicators), and [usage tracking](https://docs.openclaw.ai/concepts/usage-tracking).
-- [Models](https://docs.openclaw.ai/concepts/models), [model failover](https://docs.openclaw.ai/concepts/model-failover), and [session pruning](https://docs.openclaw.ai/concepts/session-pruning).
-- [Security](https://docs.openclaw.ai/gateway/security) and [troubleshooting](https://docs.openclaw.ai/channels/troubleshooting).
+- [채널 라우팅](https://docs.openclaw.ai/concepts/channel-routing), [재시도 정책](https://docs.openclaw.ai/concepts/retry), [스트리밍/청킹](https://docs.openclaw.ai/concepts/streaming).
+- [프레즌스](https://docs.openclaw.ai/concepts/presence), [입력 중 표시](https://docs.openclaw.ai/concepts/typing-indicators), [사용량 추적](https://docs.openclaw.ai/concepts/usage-tracking).
+- [모델](https://docs.openclaw.ai/concepts/models), [모델 장애 조치](https://docs.openclaw.ai/concepts/model-failover), [세션 정리](https://docs.openclaw.ai/concepts/session-pruning).
+- [보안](https://docs.openclaw.ai/gateway/security) 및 [문제 해결](https://docs.openclaw.ai/channels/troubleshooting).
 
-### Ops + packaging
+### 운영 + 패키징
 
-- [Control UI](https://docs.openclaw.ai/web) + [WebChat](https://docs.openclaw.ai/web/webchat) served directly from the Gateway.
-- [Tailscale Serve/Funnel](https://docs.openclaw.ai/gateway/tailscale) or [SSH tunnels](https://docs.openclaw.ai/gateway/remote) with token/password auth.
-- [Nix mode](https://docs.openclaw.ai/install/nix) for declarative config; [Docker](https://docs.openclaw.ai/install/docker)-based installs.
-- [Doctor](https://docs.openclaw.ai/gateway/doctor) migrations, [logging](https://docs.openclaw.ai/logging).
+- Gateway에서 직접 제공하는 [Control UI](https://docs.openclaw.ai/web) + [WebChat](https://docs.openclaw.ai/web/webchat).
+- 토큰/비밀번호 인증 [Tailscale Serve/Funnel](https://docs.openclaw.ai/gateway/tailscale) 또는 [SSH 터널](https://docs.openclaw.ai/gateway/remote).
+- 선언적 설정용 [Nix 모드](https://docs.openclaw.ai/install/nix); [Docker](https://docs.openclaw.ai/install/docker) 기반 설치.
+- [Doctor](https://docs.openclaw.ai/gateway/doctor) 마이그레이션, [로깅](https://docs.openclaw.ai/logging).
 
-## How it works (short)
+## 동작 방식 (요약)
 
 ```
 WhatsApp / Telegram / Slack / Discord / Google Chat / Signal / iMessage / BlueBubbles / Microsoft Teams / Matrix / Zalo / Zalo Personal / WebChat
@@ -195,123 +197,123 @@ WhatsApp / Telegram / Slack / Discord / Google Chat / Signal / iMessage / BlueBu
                └─ iOS / Android nodes
 ```
 
-## Key subsystems
+## 주요 하위 시스템
 
-- **[Gateway WebSocket network](https://docs.openclaw.ai/concepts/architecture)** — single WS control plane for clients, tools, and events (plus ops: [Gateway runbook](https://docs.openclaw.ai/gateway)).
-- **[Tailscale exposure](https://docs.openclaw.ai/gateway/tailscale)** — Serve/Funnel for the Gateway dashboard + WS (remote access: [Remote](https://docs.openclaw.ai/gateway/remote)).
-- **[Browser control](https://docs.openclaw.ai/tools/browser)** — openclaw‑managed Chrome/Chromium with CDP control.
-- **[Canvas + A2UI](https://docs.openclaw.ai/platforms/mac/canvas)** — agent‑driven visual workspace (A2UI host: [Canvas/A2UI](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui)).
-- **[Voice Wake](https://docs.openclaw.ai/nodes/voicewake) + [Talk Mode](https://docs.openclaw.ai/nodes/talk)** — always‑on speech and continuous conversation.
-- **[Nodes](https://docs.openclaw.ai/nodes)** — Canvas, camera snap/clip, screen record, `location.get`, notifications, plus macOS‑only `system.run`/`system.notify`.
+- **[Gateway WebSocket 네트워크](https://docs.openclaw.ai/concepts/architecture)** — 클라이언트, 도구, 이벤트용 단일 WS 제어 평면 (운영: [Gateway 런북](https://docs.openclaw.ai/gateway)).
+- **[Tailscale 노출](https://docs.openclaw.ai/gateway/tailscale)** — Gateway 대시보드 + WS용 Serve/Funnel (원격 접근: [원격](https://docs.openclaw.ai/gateway/remote)).
+- **[브라우저 제어](https://docs.openclaw.ai/tools/browser)** — CDP 제어가 있는 openclaw 관리 Chrome/Chromium.
+- **[Canvas + A2UI](https://docs.openclaw.ai/platforms/mac/canvas)** — 에이전트 주도 시각 작업 공간 (A2UI 호스트: [Canvas/A2UI](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui)).
+- **[Voice Wake](https://docs.openclaw.ai/nodes/voicewake) + [Talk Mode](https://docs.openclaw.ai/nodes/talk)** — 상시 음성 및 연속 대화.
+- **[노드](https://docs.openclaw.ai/nodes)** — Canvas, 카메라 스냅/클립, 화면 녹화, `location.get`, 알림, macOS 전용 `system.run`/`system.notify`.
 
-## Tailscale access (Gateway dashboard)
+## Tailscale 접근 (Gateway 대시보드)
 
-OpenClaw can auto-configure Tailscale **Serve** (tailnet-only) or **Funnel** (public) while the Gateway stays bound to loopback. Configure `gateway.tailscale.mode`:
+OpenClaw는 Gateway가 loopback에 바인딩된 상태에서 Tailscale **Serve**(테일넷 전용) 또는 **Funnel**(공개)을 자동 설정할 수 있습니다. `gateway.tailscale.mode` 설정:
 
-- `off`: no Tailscale automation (default).
-- `serve`: tailnet-only HTTPS via `tailscale serve` (uses Tailscale identity headers by default).
-- `funnel`: public HTTPS via `tailscale funnel` (requires shared password auth).
+- `off`: Tailscale 자동화 없음(기본값).
+- `serve`: `tailscale serve`로 테일넷 전용 HTTPS(기본적으로 Tailscale identity 헤더 사용).
+- `funnel`: `tailscale funnel`로 공개 HTTPS(공유 비밀번호 인증 필요).
 
-Notes:
+참고:
 
-- `gateway.bind` must stay `loopback` when Serve/Funnel is enabled (OpenClaw enforces this).
-- Serve can be forced to require a password by setting `gateway.auth.mode: "password"` or `gateway.auth.allowTailscale: false`.
-- Funnel refuses to start unless `gateway.auth.mode: "password"` is set.
-- Optional: `gateway.tailscale.resetOnExit` to undo Serve/Funnel on shutdown.
+- Serve/Funnel 사용 시 `gateway.bind`는 `loopback`이어야 합니다(OpenClaw가 강제).
+- `gateway.auth.mode: "password"` 또는 `gateway.auth.allowTailscale: false`로 Serve에 비밀번호를 요구하도록 할 수 있습니다.
+- Funnel은 `gateway.auth.mode: "password"`가 설정되지 않으면 시작하지 않습니다.
+- 선택: 종료 시 Serve/Funnel 해제용 `gateway.tailscale.resetOnExit`.
 
-Details: [Tailscale guide](https://docs.openclaw.ai/gateway/tailscale) · [Web surfaces](https://docs.openclaw.ai/web)
+자세한 내용: [Tailscale 가이드](https://docs.openclaw.ai/gateway/tailscale) · [웹 화면](https://docs.openclaw.ai/web)
 
-## Remote Gateway (Linux is great)
+## 원격 Gateway (Linux 권장)
 
-It’s perfectly fine to run the Gateway on a small Linux instance. Clients (macOS app, CLI, WebChat) can connect over **Tailscale Serve/Funnel** or **SSH tunnels**, and you can still pair device nodes (macOS/iOS/Android) to execute device‑local actions when needed.
+소형 Linux 인스턴스에서 Gateway를 실행해도 됩니다. 클라이언트(macOS 앱, CLI, WebChat)는 **Tailscale Serve/Funnel** 또는 **SSH 터널**로 연결할 수 있고, 필요 시 디바이스 노드(macOS/iOS/Android)를 페어링해 기기 로컬 액션을 실행할 수 있습니다.
 
-- **Gateway host** runs the exec tool and channel connections by default.
-- **Device nodes** run device‑local actions (`system.run`, camera, screen recording, notifications) via `node.invoke`.
-  In short: exec runs where the Gateway lives; device actions run where the device lives.
+- **Gateway 호스트**가 기본적으로 exec 도구와 채널 연결을 실행합니다.
+- **디바이스 노드**는 `node.invoke`로 기기 로컬 액션(`system.run`, 카메라, 화면 녹화, 알림)을 실행합니다.
+  요약: exec는 Gateway가 있는 곳에서, 디바이스 액션은 디바이스가 있는 곳에서 실행됩니다.
 
-Details: [Remote access](https://docs.openclaw.ai/gateway/remote) · [Nodes](https://docs.openclaw.ai/nodes) · [Security](https://docs.openclaw.ai/gateway/security)
+자세한 내용: [원격 접근](https://docs.openclaw.ai/gateway/remote) · [노드](https://docs.openclaw.ai/nodes) · [보안](https://docs.openclaw.ai/gateway/security)
 
-## macOS permissions via the Gateway protocol
+## Gateway 프로토콜을 통한 macOS 권한
 
-The macOS app can run in **node mode** and advertises its capabilities + permission map over the Gateway WebSocket (`node.list` / `node.describe`). Clients can then execute local actions via `node.invoke`:
+macOS 앱은 **노드 모드**로 실행할 수 있으며 Gateway WebSocket(`node.list` / `node.describe`)로 기능과 권한 맵을 알립니다. 클라이언트는 `node.invoke`로 로컬 액션을 실행할 수 있습니다:
 
-- `system.run` runs a local command and returns stdout/stderr/exit code; set `needsScreenRecording: true` to require screen-recording permission (otherwise you’ll get `PERMISSION_MISSING`).
-- `system.notify` posts a user notification and fails if notifications are denied.
-- `canvas.*`, `camera.*`, `screen.record`, and `location.get` are also routed via `node.invoke` and follow TCC permission status.
+- `system.run`: 로컬 명령 실행 후 stdout/stderr/종료 코드 반환; 화면 녹화 권한이 필요하면 `needsScreenRecording: true` 설정(그렇지 않으면 `PERMISSION_MISSING`).
+- `system.notify`: 사용자 알림 표시, 알림 거부 시 실패.
+- `canvas.*`, `camera.*`, `screen.record`, `location.get`도 `node.invoke`로 라우팅되며 TCC 권한 상태를 따릅니다.
 
-Elevated bash (host permissions) is separate from macOS TCC:
+상승된 bash(호스트 권한)는 macOS TCC와 별개입니다:
 
-- Use `/elevated on|off` to toggle per‑session elevated access when enabled + allowlisted.
-- Gateway persists the per‑session toggle via `sessions.patch` (WS method) alongside `thinkingLevel`, `verboseLevel`, `model`, `sendPolicy`, and `groupActivation`.
+- 활성화·허용 목록에 있을 때 `/elevated on|off`로 세션별 상승 접근을 켜거나 끕니다.
+- Gateway는 `sessions.patch`(WS 메서드)로 해당 토글을 `thinkingLevel`, `verboseLevel`, `model`, `sendPolicy`, `groupActivation`과 함께 유지합니다.
 
-Details: [Nodes](https://docs.openclaw.ai/nodes) · [macOS app](https://docs.openclaw.ai/platforms/macos) · [Gateway protocol](https://docs.openclaw.ai/concepts/architecture)
+자세한 내용: [노드](https://docs.openclaw.ai/nodes) · [macOS 앱](https://docs.openclaw.ai/platforms/macos) · [Gateway 프로토콜](https://docs.openclaw.ai/concepts/architecture)
 
-## Agent to Agent (sessions\_\* tools)
+## 에이전트 간 통신 (sessions\_\* 도구)
 
-- Use these to coordinate work across sessions without jumping between chat surfaces.
-- `sessions_list` — discover active sessions (agents) and their metadata.
-- `sessions_history` — fetch transcript logs for a session.
-- `sessions_send` — message another session; optional reply‑back ping‑pong + announce step (`REPLY_SKIP`, `ANNOUNCE_SKIP`).
+- 채팅 화면을 오가지 않고 세션 간 작업을 조율할 때 사용합니다.
+- `sessions_list` — 활성 세션(에이전트)과 메타데이터 조회.
+- `sessions_history` — 세션의 대화 로그 조회.
+- `sessions_send` — 다른 세션에 메시지 전송; 선택적 답장 핑퐁 및 단계 알림(`REPLY_SKIP`, `ANNOUNCE_SKIP`).
 
-Details: [Session tools](https://docs.openclaw.ai/concepts/session-tool)
+자세한 내용: [세션 도구](https://docs.openclaw.ai/concepts/session-tool)
 
-## Skills registry (ClawHub)
+## 스킬 레지스트리 (ClawHub)
 
-ClawHub is a minimal skill registry. With ClawHub enabled, the agent can search for skills automatically and pull in new ones as needed.
+ClawHub는 최소 규모의 스킬 레지스트리입니다. ClawHub를 켜면 에이전트가 스킬을 자동 검색하고 필요 시 새 스킬을 가져올 수 있습니다.
 
 [ClawHub](https://clawhub.com)
 
-## Chat commands
+## 채팅 명령어
 
-Send these in WhatsApp/Telegram/Slack/Google Chat/Microsoft Teams/WebChat (group commands are owner-only):
+WhatsApp/Telegram/Slack/Google Chat/Microsoft Teams/WebChat에서 보냅니다(그룹 명령은 소유자 전용):
 
-- `/status` — compact session status (model + tokens, cost when available)
-- `/new` or `/reset` — reset the session
-- `/compact` — compact session context (summary)
-- `/think <level>` — off|minimal|low|medium|high|xhigh (GPT-5.2 + Codex models only)
+- `/status` — 세션 상태 요약(모델, 토큰, 비용 표시 시)
+- `/new` 또는 `/reset` — 세션 초기화
+- `/compact` — 세션 문맥 압축(요약)
+- `/think <level>` — off|minimal|low|medium|high|xhigh (GPT-5.2 + Codex 모델만)
 - `/verbose on|off`
-- `/usage off|tokens|full` — per-response usage footer
-- `/restart` — restart the gateway (owner-only in groups)
-- `/activation mention|always` — group activation toggle (groups only)
+- `/usage off|tokens|full` — 응답별 사용량 푸터
+- `/restart` — gateway 재시작(그룹에서는 소유자 전용)
+- `/activation mention|always` — 그룹 활성화 전환(그룹 전용)
 
-## Apps (optional)
+## 앱 (선택)
 
-The Gateway alone delivers a great experience. All apps are optional and add extra features.
+Gateway만으로도 충분한 경험을 제공합니다. 모든 앱은 선택 사항이며 추가 기능을 제공합니다.
 
-If you plan to build/run companion apps, follow the platform runbooks below.
+동반 앱을 빌드/실행할 계획이면 아래 플랫폼 런북을 따르세요.
 
-### macOS (OpenClaw.app) (optional)
+### macOS (OpenClaw.app) (선택)
 
-- Menu bar control for the Gateway and health.
-- Voice Wake + push-to-talk overlay.
-- WebChat + debug tools.
-- Remote gateway control over SSH.
+- Gateway 및 상태용 메뉴 바 제어.
+- Voice Wake + push-to-talk 오버레이.
+- WebChat + 디버그 도구.
+- SSH를 통한 원격 gateway 제어.
 
-Note: signed builds required for macOS permissions to stick across rebuilds (see `docs/mac/permissions.md`).
+참고: macOS 권한이 재빌드 후에도 유지되려면 서명된 빌드가 필요합니다(`docs/mac/permissions.md` 참고).
 
-### iOS node (optional)
+### iOS 노드 (선택)
 
-- Pairs as a node via the Bridge.
-- Voice trigger forwarding + Canvas surface.
-- Controlled via `openclaw nodes …`.
+- Bridge를 통해 노드로 페어링.
+- 음성 트리거 전달 + Canvas 화면.
+- `openclaw nodes …`로 제어.
 
-Runbook: [iOS connect](https://docs.openclaw.ai/platforms/ios).
+런북: [iOS 연결](https://docs.openclaw.ai/platforms/ios).
 
-### Android node (optional)
+### Android 노드 (선택)
 
-- Pairs via the same Bridge + pairing flow as iOS.
-- Exposes Canvas, Camera, and Screen capture commands.
-- Runbook: [Android connect](https://docs.openclaw.ai/platforms/android).
+- iOS와 동일한 Bridge + 페어링 흐름으로 페어링.
+- Canvas, Camera, 화면 캡처 명령 노출.
+- 런북: [Android 연결](https://docs.openclaw.ai/platforms/android).
 
-## Agent workspace + skills
+## 에이전트 워크스페이스 + 스킬
 
-- Workspace root: `~/.openclaw/workspace` (configurable via `agents.defaults.workspace`).
-- Injected prompt files: `AGENTS.md`, `SOUL.md`, `TOOLS.md`.
-- Skills: `~/.openclaw/workspace/skills/<skill>/SKILL.md`.
+- 워크스페이스 루트: `~/.openclaw/workspace` (`agents.defaults.workspace`로 설정 가능).
+- 주입되는 프롬프트 파일: `AGENTS.md`, `SOUL.md`, `TOOLS.md`.
+- 스킬: `~/.openclaw/workspace/skills/<skill>/SKILL.md`.
 
-## Configuration
+## 설정
 
-Minimal `~/.openclaw/openclaw.json` (model + defaults):
+최소 `~/.openclaw/openclaw.json`(모델 + 기본값):
 
 ```json5
 {
@@ -321,26 +323,26 @@ Minimal `~/.openclaw/openclaw.json` (model + defaults):
 }
 ```
 
-[Full configuration reference (all keys + examples).](https://docs.openclaw.ai/gateway/configuration)
+[전체 설정 참조(모든 키 + 예시).](https://docs.openclaw.ai/gateway/configuration)
 
-## Security model (important)
+## 보안 모델 (중요)
 
-- **Default:** tools run on the host for the **main** session, so the agent has full access when it’s just you.
-- **Group/channel safety:** set `agents.defaults.sandbox.mode: "non-main"` to run **non‑main sessions** (groups/channels) inside per‑session Docker sandboxes; bash then runs in Docker for those sessions.
-- **Sandbox defaults:** allowlist `bash`, `process`, `read`, `write`, `edit`, `sessions_list`, `sessions_history`, `sessions_send`, `sessions_spawn`; denylist `browser`, `canvas`, `nodes`, `cron`, `discord`, `gateway`.
+- **기본:** **main** 세션의 도구는 호스트에서 실행되며, 본인만 사용할 때 에이전트는 전체 접근 권한을 가집니다.
+- **그룹/채널 안전:** `agents.defaults.sandbox.mode: "non-main"`으로 **non-main 세션**(그룹/채널)을 세션별 Docker 샌드박스 안에서 실행하고, 해당 세션의 bash는 Docker 안에서 실행됩니다.
+- **샌드박스 기본값:** 허용 목록 `bash`, `process`, `read`, `write`, `edit`, `sessions_list`, `sessions_history`, `sessions_send`, `sessions_spawn`; 거부 목록 `browser`, `canvas`, `nodes`, `cron`, `discord`, `gateway`.
 
-Details: [Security guide](https://docs.openclaw.ai/gateway/security) · [Docker + sandboxing](https://docs.openclaw.ai/install/docker) · [Sandbox config](https://docs.openclaw.ai/gateway/configuration)
+자세한 내용: [보안 가이드](https://docs.openclaw.ai/gateway/security) · [Docker + 샌드박싱](https://docs.openclaw.ai/install/docker) · [샌드박스 설정](https://docs.openclaw.ai/gateway/configuration)
 
 ### [WhatsApp](https://docs.openclaw.ai/channels/whatsapp)
 
-- Link the device: `pnpm openclaw channels login` (stores creds in `~/.openclaw/credentials`).
-- Allowlist who can talk to the assistant via `channels.whatsapp.allowFrom`.
-- If `channels.whatsapp.groups` is set, it becomes a group allowlist; include `"*"` to allow all.
+- 기기 연결: `pnpm openclaw channels login` (자격 증명은 `~/.openclaw/credentials`에 저장).
+- `channels.whatsapp.allowFrom`으로 어시스턴트와 대화할 수 있는 대상 허용 목록 설정.
+- `channels.whatsapp.groups`를 설정하면 그룹 허용 목록이 되며, `"*"`를 넣으면 모두 허용.
 
 ### [Telegram](https://docs.openclaw.ai/channels/telegram)
 
-- Set `TELEGRAM_BOT_TOKEN` or `channels.telegram.botToken` (env wins).
-- Optional: set `channels.telegram.groups` (with `channels.telegram.groups."*".requireMention`); when set, it is a group allowlist (include `"*"` to allow all). Also `channels.telegram.allowFrom` or `channels.telegram.webhookUrl` + `channels.telegram.webhookSecret` as needed.
+- `TELEGRAM_BOT_TOKEN` 또는 `channels.telegram.botToken` 설정(환경 변수가 우선).
+- 선택: `channels.telegram.groups` 설정(`channels.telegram.groups."*".requireMention` 포함); 설정 시 그룹 허용 목록(전체 허용 시 `"*"` 포함). 필요 시 `channels.telegram.allowFrom` 또는 `channels.telegram.webhookUrl` + `channels.telegram.webhookSecret`.
 
 ```json5
 {
@@ -354,12 +356,12 @@ Details: [Security guide](https://docs.openclaw.ai/gateway/security) · [Docker 
 
 ### [Slack](https://docs.openclaw.ai/channels/slack)
 
-- Set `SLACK_BOT_TOKEN` + `SLACK_APP_TOKEN` (or `channels.slack.botToken` + `channels.slack.appToken`).
+- `SLACK_BOT_TOKEN` + `SLACK_APP_TOKEN` (또는 `channels.slack.botToken` + `channels.slack.appToken`) 설정.
 
 ### [Discord](https://docs.openclaw.ai/channels/discord)
 
-- Set `DISCORD_BOT_TOKEN` or `channels.discord.token` (env wins).
-- Optional: set `commands.native`, `commands.text`, or `commands.useAccessGroups`, plus `channels.discord.dm.allowFrom`, `channels.discord.guilds`, or `channels.discord.mediaMaxMb` as needed.
+- `DISCORD_BOT_TOKEN` 또는 `channels.discord.token` 설정(환경 변수가 우선).
+- 선택: 필요에 따라 `commands.native`, `commands.text`, `commands.useAccessGroups` 및 `channels.discord.dm.allowFrom`, `channels.discord.guilds`, `channels.discord.mediaMaxMb` 설정.
 
 ```json5
 {
@@ -373,23 +375,23 @@ Details: [Security guide](https://docs.openclaw.ai/gateway/security) · [Docker 
 
 ### [Signal](https://docs.openclaw.ai/channels/signal)
 
-- Requires `signal-cli` and a `channels.signal` config section.
+- `signal-cli`와 `channels.signal` 설정 섹션 필요.
 
 ### [iMessage](https://docs.openclaw.ai/channels/imessage)
 
-- macOS only; Messages must be signed in.
-- If `channels.imessage.groups` is set, it becomes a group allowlist; include `"*"` to allow all.
+- macOS 전용; 메시지에 로그인되어 있어야 함.
+- `channels.imessage.groups`를 설정하면 그룹 허용 목록이 되며, `"*"`를 넣으면 모두 허용.
 
 ### [Microsoft Teams](https://docs.openclaw.ai/channels/msteams)
 
-- Configure a Teams app + Bot Framework, then add a `msteams` config section.
-- Allowlist who can talk via `msteams.allowFrom`; group access via `msteams.groupAllowFrom` or `msteams.groupPolicy: "open"`.
+- Teams 앱 + Bot Framework 설정 후 `msteams` 설정 섹션 추가.
+- `msteams.allowFrom`으로 대화 허용 대상 설정; 그룹 접근은 `msteams.groupAllowFrom` 또는 `msteams.groupPolicy: "open"`.
 
 ### [WebChat](https://docs.openclaw.ai/web/webchat)
 
-- Uses the Gateway WebSocket; no separate WebChat port/config.
+- Gateway WebSocket 사용; 별도 WebChat 포트/설정 없음.
 
-Browser control (optional):
+브라우저 제어(선택):
 
 ```json5
 {
@@ -400,94 +402,93 @@ Browser control (optional):
 }
 ```
 
-## Docs
+## 문서
 
-Use these when you’re past the onboarding flow and want the deeper reference.
+온보딩을 마친 뒤 더 자세한 참고가 필요할 때 활용하세요.
 
-- [Start with the docs index for navigation and “what’s where.”](https://docs.openclaw.ai)
-- [Read the architecture overview for the gateway + protocol model.](https://docs.openclaw.ai/concepts/architecture)
-- [Use the full configuration reference when you need every key and example.](https://docs.openclaw.ai/gateway/configuration)
-- [Run the Gateway by the book with the operational runbook.](https://docs.openclaw.ai/gateway)
-- [Learn how the Control UI/Web surfaces work and how to expose them safely.](https://docs.openclaw.ai/web)
-- [Understand remote access over SSH tunnels or tailnets.](https://docs.openclaw.ai/gateway/remote)
-- [Follow the onboarding wizard flow for a guided setup.](https://docs.openclaw.ai/start/wizard)
-- [Wire external triggers via the webhook surface.](https://docs.openclaw.ai/automation/webhook)
-- [Set up Gmail Pub/Sub triggers.](https://docs.openclaw.ai/automation/gmail-pubsub)
-- [Learn the macOS menu bar companion details.](https://docs.openclaw.ai/platforms/mac/menu-bar)
-- [Platform guides: Windows (WSL2)](https://docs.openclaw.ai/platforms/windows), [Linux](https://docs.openclaw.ai/platforms/linux), [macOS](https://docs.openclaw.ai/platforms/macos), [iOS](https://docs.openclaw.ai/platforms/ios), [Android](https://docs.openclaw.ai/platforms/android)
-- [Debug common failures with the troubleshooting guide.](https://docs.openclaw.ai/channels/troubleshooting)
-- [Review security guidance before exposing anything.](https://docs.openclaw.ai/gateway/security)
+- [문서 인덱스에서 항목별 탐색과 "무엇이 어디 있는지" 확인.](https://docs.openclaw.ai)
+- [Gateway와 프로토콜 모델에 대한 아키텍처 개요 읽기.](https://docs.openclaw.ai/concepts/architecture)
+- [모든 키와 예시가 필요할 때 전체 설정 참조 사용.](https://docs.openclaw.ai/gateway/configuration)
+- [운영 런북에 따라 Gateway 실행.](https://docs.openclaw.ai/gateway)
+- [Control UI/웹 화면 동작 방식과 안전한 노출 방법.](https://docs.openclaw.ai/web)
+- [SSH 터널 또는 테일넷을 통한 원격 접근 이해.](https://docs.openclaw.ai/gateway/remote)
+- [안내 설정을 위한 온보딩 마법사 흐름 따르기.](https://docs.openclaw.ai/start/wizard)
+- [웹훅을 통한 외부 트리거 연결.](https://docs.openclaw.ai/automation/webhook)
+- [Gmail Pub/Sub 트리거 설정.](https://docs.openclaw.ai/automation/gmail-pubsub)
+- [macOS 메뉴 바 동반 앱 상세.](https://docs.openclaw.ai/platforms/mac/menu-bar)
+- [플랫폼 가이드: Windows (WSL2)](https://docs.openclaw.ai/platforms/windows), [Linux](https://docs.openclaw.ai/platforms/linux), [macOS](https://docs.openclaw.ai/platforms/macos), [iOS](https://docs.openclaw.ai/platforms/ios), [Android](https://docs.openclaw.ai/platforms/android)
+- [문제 해결 가이드로 흔한 오류 디버깅.](https://docs.openclaw.ai/channels/troubleshooting)
+- [무언가를 노출하기 전에 보안 가이드 검토.](https://docs.openclaw.ai/gateway/security)
 
-## Advanced docs (discovery + control)
+## 고급 문서 (발견 + 제어)
 
-- [Discovery + transports](https://docs.openclaw.ai/gateway/discovery)
+- [발견 + 전송](https://docs.openclaw.ai/gateway/discovery)
 - [Bonjour/mDNS](https://docs.openclaw.ai/gateway/bonjour)
-- [Gateway pairing](https://docs.openclaw.ai/gateway/pairing)
-- [Remote gateway README](https://docs.openclaw.ai/gateway/remote-gateway-readme)
+- [Gateway 페어링](https://docs.openclaw.ai/gateway/pairing)
+- [원격 gateway README](https://docs.openclaw.ai/gateway/remote-gateway-readme)
 - [Control UI](https://docs.openclaw.ai/web/control-ui)
-- [Dashboard](https://docs.openclaw.ai/web/dashboard)
+- [대시보드](https://docs.openclaw.ai/web/dashboard)
 
-## Operations & troubleshooting
+## 운영 및 문제 해결
 
-- [Health checks](https://docs.openclaw.ai/gateway/health)
-- [Gateway lock](https://docs.openclaw.ai/gateway/gateway-lock)
-- [Background process](https://docs.openclaw.ai/gateway/background-process)
-- [Browser troubleshooting (Linux)](https://docs.openclaw.ai/tools/browser-linux-troubleshooting)
-- [Logging](https://docs.openclaw.ai/logging)
+- [헬스 체크](https://docs.openclaw.ai/gateway/health)
+- [Gateway 잠금](https://docs.openclaw.ai/gateway/gateway-lock)
+- [백그라운드 프로세스](https://docs.openclaw.ai/gateway/background-process)
+- [브라우저 문제 해결 (Linux)](https://docs.openclaw.ai/tools/browser-linux-troubleshooting)
+- [로깅](https://docs.openclaw.ai/logging)
 
-## Deep dives
+## 심화 문서
 
-- [Agent loop](https://docs.openclaw.ai/concepts/agent-loop)
-- [Presence](https://docs.openclaw.ai/concepts/presence)
-- [TypeBox schemas](https://docs.openclaw.ai/concepts/typebox)
-- [RPC adapters](https://docs.openclaw.ai/reference/rpc)
-- [Queue](https://docs.openclaw.ai/concepts/queue)
+- [에이전트 루프](https://docs.openclaw.ai/concepts/agent-loop)
+- [프레즌스](https://docs.openclaw.ai/concepts/presence)
+- [TypeBox 스키마](https://docs.openclaw.ai/concepts/typebox)
+- [RPC 어댑터](https://docs.openclaw.ai/reference/rpc)
+- [큐](https://docs.openclaw.ai/concepts/queue)
 
-## Workspace & skills
+## 워크스페이스 및 스킬
 
-- [Skills config](https://docs.openclaw.ai/tools/skills-config)
-- [Default AGENTS](https://docs.openclaw.ai/reference/AGENTS.default)
-- [Templates: AGENTS](https://docs.openclaw.ai/reference/templates/AGENTS)
-- [Templates: BOOTSTRAP](https://docs.openclaw.ai/reference/templates/BOOTSTRAP)
-- [Templates: IDENTITY](https://docs.openclaw.ai/reference/templates/IDENTITY)
-- [Templates: SOUL](https://docs.openclaw.ai/reference/templates/SOUL)
-- [Templates: TOOLS](https://docs.openclaw.ai/reference/templates/TOOLS)
-- [Templates: USER](https://docs.openclaw.ai/reference/templates/USER)
+- [스킬 설정](https://docs.openclaw.ai/tools/skills-config)
+- [기본 AGENTS](https://docs.openclaw.ai/reference/AGENTS.default)
+- [템플릿: AGENTS](https://docs.openclaw.ai/reference/templates/AGENTS)
+- [템플릿: BOOTSTRAP](https://docs.openclaw.ai/reference/templates/BOOTSTRAP)
+- [템플릿: IDENTITY](https://docs.openclaw.ai/reference/templates/IDENTITY)
+- [템플릿: SOUL](https://docs.openclaw.ai/reference/templates/SOUL)
+- [템플릿: TOOLS](https://docs.openclaw.ai/reference/templates/TOOLS)
+- [템플릿: USER](https://docs.openclaw.ai/reference/templates/USER)
 
-## Platform internals
+## 플랫폼 내부
 
-- [macOS dev setup](https://docs.openclaw.ai/platforms/mac/dev-setup)
-- [macOS menu bar](https://docs.openclaw.ai/platforms/mac/menu-bar)
-- [macOS voice wake](https://docs.openclaw.ai/platforms/mac/voicewake)
-- [iOS node](https://docs.openclaw.ai/platforms/ios)
-- [Android node](https://docs.openclaw.ai/platforms/android)
+- [macOS 개발 환경](https://docs.openclaw.ai/platforms/mac/dev-setup)
+- [macOS 메뉴 바](https://docs.openclaw.ai/platforms/mac/menu-bar)
+- [macOS 음성 웨이크](https://docs.openclaw.ai/platforms/mac/voicewake)
+- [iOS 노드](https://docs.openclaw.ai/platforms/ios)
+- [Android 노드](https://docs.openclaw.ai/platforms/android)
 - [Windows (WSL2)](https://docs.openclaw.ai/platforms/windows)
-- [Linux app](https://docs.openclaw.ai/platforms/linux)
+- [Linux 앱](https://docs.openclaw.ai/platforms/linux)
 
-## Email hooks (Gmail)
+## 이메일 훅 (Gmail)
 
 - [docs.openclaw.ai/gmail-pubsub](https://docs.openclaw.ai/automation/gmail-pubsub)
 
 ## Molty
 
-OpenClaw was built for **Molty**, a space lobster AI assistant. 🦞
-by Peter Steinberger and the community.
+OpenClaw는 우주 랍스터 AI 어시스턴트 **Molty**를 위해 만들어졌습니다. 🦞
+Peter Steinberger와 커뮤니티가 함께했습니다.
 
 - [openclaw.ai](https://openclaw.ai)
 - [soul.md](https://soul.md)
 - [steipete.me](https://steipete.me)
 - [@openclaw](https://x.com/openclaw)
 
-## Community
+## 커뮤니티
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines, maintainers, and how to submit PRs.
-AI/vibe-coded PRs welcome! 🤖
+가이드라인, 유지보수자, PR 제출 방법은 [CONTRIBUTING.md](CONTRIBUTING.md)를 참고하세요.
+AI/바이브 코딩 PR도 환영합니다! 🤖
 
-Special thanks to [Mario Zechner](https://mariozechner.at/) for his support and for
-[pi-mono](https://github.com/badlogic/pi-mono).
-Special thanks to Adam Doppelt for lobster.bot.
+[pi-mono](https://github.com/badlogic/pi-mono)와 지원에 특별히 감사드립니다 — [Mario Zechner](https://mariozechner.at/).
+lobster.bot에 감사드립니다 — Adam Doppelt.
 
-Thanks to all clawtributors:
+모든 clawtributors에게 감사합니다:
 
 <p align="left">
   <a href="https://github.com/steipete"><img src="https://avatars.githubusercontent.com/u/58493?v=4&s=48" width="48" height="48" alt="steipete" title="steipete"/></a> <a href="https://github.com/cpojer"><img src="https://avatars.githubusercontent.com/u/13352?v=4&s=48" width="48" height="48" alt="cpojer" title="cpojer"/></a> <a href="https://github.com/plum-dawg"><img src="https://avatars.githubusercontent.com/u/5909950?v=4&s=48" width="48" height="48" alt="plum-dawg" title="plum-dawg"/></a> <a href="https://github.com/bohdanpodvirnyi"><img src="https://avatars.githubusercontent.com/u/31819391?v=4&s=48" width="48" height="48" alt="bohdanpodvirnyi" title="bohdanpodvirnyi"/></a> <a href="https://github.com/iHildy"><img src="https://avatars.githubusercontent.com/u/25069719?v=4&s=48" width="48" height="48" alt="iHildy" title="iHildy"/></a> <a href="https://github.com/jaydenfyi"><img src="https://avatars.githubusercontent.com/u/213395523?v=4&s=48" width="48" height="48" alt="jaydenfyi" title="jaydenfyi"/></a> <a href="https://github.com/joshp123"><img src="https://avatars.githubusercontent.com/u/1497361?v=4&s=48" width="48" height="48" alt="joshp123" title="joshp123"/></a> <a href="https://github.com/joaohlisboa"><img src="https://avatars.githubusercontent.com/u/8200873?v=4&s=48" width="48" height="48" alt="joaohlisboa" title="joaohlisboa"/></a> <a href="https://github.com/mneves75"><img src="https://avatars.githubusercontent.com/u/2423436?v=4&s=48" width="48" height="48" alt="mneves75" title="mneves75"/></a> <a href="https://github.com/MatthieuBizien"><img src="https://avatars.githubusercontent.com/u/173090?v=4&s=48" width="48" height="48" alt="MatthieuBizien" title="MatthieuBizien"/></a>
