@@ -470,6 +470,19 @@ Gateway만으로도 충분한 경험을 제공합니다. 모든 앱은 선택 �
 
 - [docs.openclaw.ai/gmail-pubsub](https://docs.openclaw.ai/automation/gmail-pubsub)
 
+## 🚀 확장 방향성 및 로드맵
+
+OpenClaw의 미래 확장 계획과 전략적 방향성을 알아보세요:
+
+- **[확장 방향성 문서](docs/roadmap/expansion-directions.md)** - 주요 확장 영역 및 우선순위 로드맵
+  - 📱 메시징 채널 확장 (Kakao Talk, WeChat, Facebook Messenger)
+  - 🤖 AI 모델 프로바이더 확장 (Ollama, Hugging Face, Cohere)
+  - 🛠️ 스킬 생태계 (생산성, 개발, 커뮤니케이션 도구)
+  - 💻 플랫폼 확장 (Windows, Linux, 웨어러블, IoT)
+  - 🏢 엔터프라이즈 기능 (Multi-tenancy, RBAC, 보안 & 컴플라이언스)
+
+커뮤니티의 피드백과 기여를 환영합니다!
+
 ## Molty
 
 OpenClaw는 우주 랍스터 AI 어시스턴트 **Molty**를 위해 만들어졌습니다. 🦞
