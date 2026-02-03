@@ -2,6 +2,7 @@ import type { Command } from "commander";
 import { healthCommand } from "../../commands/health.js";
 import { sessionsCommand } from "../../commands/sessions.js";
 import { statusCommand } from "../../commands/status.js";
+import { tokenCommand } from "../../commands/token.js";
 import { setVerbose } from "../../globals.js";
 import { defaultRuntime } from "../../runtime.js";
 import { formatDocsLink } from "../../terminal/links.js";
@@ -142,5 +143,38 @@ export function registerStatusHealthSessionsCommands(program: Command) {
         },
         defaultRuntime,
       );
+    });
+
+  program
+    .command("token")
+    .description("Show token usage and cost summary from session logs")
+    .option("--days <n>", "Number of days to aggregate (default: 30)", "30")
+    .option("--agent <id>", "Agent ID to scope session logs (default: default agent)")
+    .option("--provider", "Include provider usage/quota snapshots", false)
+    .option("--json", "Output JSON instead of text", false)
+    .addHelpText(
+      "after",
+      () =>
+        `\n${theme.heading("Examples:")}\n${formatHelpExamples([
+          ["openclaw token", "Last 30 days token + cost summary."],
+          ["openclaw token --days 7", "Last 7 days only."],
+          ["openclaw token --provider", "Include provider quota (e.g. Anthropic, OpenAI)."],
+          ["openclaw token --json", "Machine-readable output."],
+        ])}`,
+    )
+    .addHelpText(
+      "after",
+      () =>
+        `\n${theme.muted("Docs:")} ${formatDocsLink("/cli/token", "docs.openclaw.ai/cli/token")}\n`,
+    )
+    .action(async (opts) => {
+      await runCommandWithRuntime(defaultRuntime, async () => {
+        await tokenCommand(defaultRuntime, {
+          days: opts.days !== undefined ? Number(opts.days) : undefined,
+          agent: opts.agent as string | undefined,
+          provider: Boolean(opts.provider),
+          json: Boolean(opts.json),
+        });
+      });
     });
 }

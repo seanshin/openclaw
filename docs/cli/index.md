@@ -28,6 +28,7 @@ This page describes the current CLI behavior. If commands change, update this do
 - [`status`](/cli/status)
 - [`health`](/cli/health)
 - [`sessions`](/cli/sessions)
+- [`token`](/cli/token)
 - [`gateway`](/cli/gateway)
 - [`logs`](/cli/logs)
 - [`system`](/cli/system)

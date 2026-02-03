@@ -52,8 +52,7 @@ Use these in chat:
 Other surfaces:
 
 - **TUI/Web TUI:** `/status` + `/usage` are supported.
-- **CLI:** `openclaw status --usage` and `openclaw channels list` show
-  provider quota windows (not per-response costs).
+- **CLI:** `openclaw token` shows token usage and estimated cost from session logs (daily breakdown + totals); `openclaw token --provider` adds provider quota windows. `openclaw status --usage` and `openclaw channels list` show provider quota only (not per-response costs).
 
 ## Cost estimation (when shown)
 
