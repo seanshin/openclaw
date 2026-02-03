@@ -109,6 +109,7 @@ Tip: if you don’t have a global install yet, run repo commands via `pnpm openc
 - Nix: [Nix](/install/nix)
 - Ansible: [Ansible](/install/ansible)
 - Bun (CLI only): [Bun](/install/bun)
+- 의존성 구조(루트 vs 워크스페이스·확장): [Dependencies](/install/dependencies)
 
 ## After install
 

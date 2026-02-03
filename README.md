@@ -108,6 +108,8 @@ pnpm gateway:watch
 
 참고: `pnpm openclaw ...`는 TypeScript를 직접 실행합니다(tsx 사용). `pnpm build`는 Node/패키지된 `openclaw` 바이너리용 `dist/`를 만듭니다.
 
+**의존성 구조**: 루트 패키지(코어)와 워크스페이스(`ui`, `packages/*`, `extensions/*`)가 분리되어 있습니다. 확장 전용 라이브러리는 각 확장의 `package.json`에만 두고, 루트에는 넣지 않습니다. 자세한 규칙은 [의존성 구조](https://docs.openclaw.ai/install/dependencies)를 참고하세요.
+
 ## 보안 기본값 (DM 접근)
 
 OpenClaw는 실제 메시징 채널에 연결됩니다. 수신 DM은 **신뢰할 수 없는 입력**으로 취급하세요.
