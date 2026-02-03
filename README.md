@@ -139,7 +139,7 @@ Telegram/WhatsApp/Signal/iMessage/Microsoft Teams/Discord/Google Chat/Slack 기�
 ### 핵심 플랫폼
 
 - 세션, 프레즌스, 설정, cron, 웹훅, [Control UI](https://docs.openclaw.ai/web), [Canvas 호스트](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui)를 갖춘 [Gateway WS 제어 평면](https://docs.openclaw.ai/gateway).
-- [CLI](https://docs.openclaw.ai/tools/agent-send): gateway, agent, send, [마법사](https://docs.openclaw.ai/start/wizard), [doctor](https://docs.openclaw.ai/gateway/doctor).
+- [CLI](https://docs.openclaw.ai/tools/agent-send): gateway, agent, send, token-monitor, [마법사](https://docs.openclaw.ai/start/wizard), [doctor](https://docs.openclaw.ai/gateway/doctor).
 - 도구 스트리밍·블록 스트리밍이 있는 RPC 모드 [Pi 에이전트 런타임](https://docs.openclaw.ai/concepts/agent).
 - [세션 모델](https://docs.openclaw.ai/concepts/session): 직접 채팅용 `main`, 그룹 격리, 활성화 모드, 큐 모드, 답장. 그룹 규칙: [그룹](https://docs.openclaw.ai/concepts/groups).
 - [미디어 파이프라인](https://docs.openclaw.ai/nodes/images): 이미지/오디오/비디오, 전사 훅, 크기 제한, 임시 파일 생명 주기. 오디오 상세: [오디오](https://docs.openclaw.ai/nodes/audio).
@@ -167,7 +167,7 @@ Telegram/WhatsApp/Signal/iMessage/Microsoft Teams/Discord/Google Chat/Slack 기�
 ### 런타임 + 안전
 
 - [채널 라우팅](https://docs.openclaw.ai/concepts/channel-routing), [재시도 정책](https://docs.openclaw.ai/concepts/retry), [스트리밍/청킹](https://docs.openclaw.ai/concepts/streaming).
-- [프레즌스](https://docs.openclaw.ai/concepts/presence), [입력 중 표시](https://docs.openclaw.ai/concepts/typing-indicators), [사용량 추적](https://docs.openclaw.ai/concepts/usage-tracking).
+- [프레즌스](https://docs.openclaw.ai/concepts/presence), [입력 중 표시](https://docs.openclaw.ai/concepts/typing-indicators), [사용량 추적](https://docs.openclaw.ai/concepts/usage-tracking), [토큰 모니터링](./docs/token-monitoring.md).
 - [모델](https://docs.openclaw.ai/concepts/models), [모델 장애 조치](https://docs.openclaw.ai/concepts/model-failover), [세션 정리](https://docs.openclaw.ai/concepts/session-pruning).
 - [보안](https://docs.openclaw.ai/gateway/security) 및 [문제 해결](https://docs.openclaw.ai/channels/troubleshooting).
 

@@ -5,6 +5,8 @@ import {
   type SessionEntry,
   updateSessionStoreEntry,
 } from "../../config/sessions.js";
+import { loadConfig } from "../../config/config.js";
+import { recordTokenUsage } from "../../infra/token-monitor.js";
 import { logVerbose } from "../../globals.js";
 
 export async function persistSessionUsageUpdate(params: {
@@ -26,6 +28,22 @@ export async function persistSessionUsageUpdate(params: {
   const label = params.logLabel ? `${params.logLabel} ` : "";
   if (hasNonzeroUsage(params.usage)) {
     try {
+      // Record token usage to monitor
+      if (params.usage && params.providerUsed && params.modelUsed) {
+        try {
+          const config = loadConfig();
+          await recordTokenUsage({
+            provider: params.providerUsed,
+            model: params.modelUsed,
+            usage: params.usage,
+            config,
+            sessionId: sessionKey,
+          });
+        } catch (monitorErr) {
+          logVerbose(`failed to record token usage to monitor: ${String(monitorErr)}`);
+        }
+      }
+
       await updateSessionStoreEntry({
         storePath,
         sessionKey,
