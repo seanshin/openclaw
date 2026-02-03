@@ -72,6 +72,9 @@ openclaw message send --to +1234567890 --message "Hello from OpenClaw"
 
 # 어시스턴트와 대화 (연결된 채널로 답장 가능: WhatsApp/Telegram/Slack/Discord/Google Chat/Signal/iMessage/BlueBubbles/Microsoft Teams/Matrix/Zalo/Zalo Personal/WebChat)
 openclaw agent --message "Ship checklist" --thinking high
+
+# 토큰 사용량·비용 요약 (세션 로그 기준, 최근 30일)
+openclaw token
 ```
 
 업그레이드할 때는 [업데이트 가이드](https://docs.openclaw.ai/install/updating)를 참고하고 `openclaw doctor`를 실행하세요.
@@ -139,7 +142,7 @@ Telegram/WhatsApp/Signal/iMessage/Microsoft Teams/Discord/Google Chat/Slack 기�
 ### 핵심 플랫폼
 
 - 세션, 프레즌스, 설정, cron, 웹훅, [Control UI](https://docs.openclaw.ai/web), [Canvas 호스트](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui)를 갖춘 [Gateway WS 제어 평면](https://docs.openclaw.ai/gateway).
-- [CLI](https://docs.openclaw.ai/tools/agent-send): gateway, agent, send, [마법사](https://docs.openclaw.ai/start/wizard), [doctor](https://docs.openclaw.ai/gateway/doctor).
+- [CLI](https://docs.openclaw.ai/tools/agent-send): gateway, agent, send, [마법사](https://docs.openclaw.ai/start/wizard), [doctor](https://docs.openclaw.ai/gateway/doctor), [token](https://docs.openclaw.ai/cli/token) (토큰·비용 모니터링).
 - 도구 스트리밍·블록 스트리밍이 있는 RPC 모드 [Pi 에이전트 런타임](https://docs.openclaw.ai/concepts/agent).
 - [세션 모델](https://docs.openclaw.ai/concepts/session): 직접 채팅용 `main`, 그룹 격리, 활성화 모드, 큐 모드, 답장. 그룹 규칙: [그룹](https://docs.openclaw.ai/concepts/groups).
 - [미디어 파이프라인](https://docs.openclaw.ai/nodes/images): 이미지/오디오/비디오, 전사 훅, 크기 제한, 임시 파일 생명 주기. 오디오 상세: [오디오](https://docs.openclaw.ai/nodes/audio).
@@ -273,8 +276,11 @@ WhatsApp/Telegram/Slack/Google Chat/Microsoft Teams/WebChat에서 보냅니다(�
 - `/think <level>` — off|minimal|low|medium|high|xhigh (GPT-5.2 + Codex 모델만)
 - `/verbose on|off`
 - `/usage off|tokens|full` — 응답별 사용량 푸터
+- `/usage cost` — 세션 로그 기반 비용 요약
 - `/restart` — gateway 재시작(그룹에서는 소유자 전용)
 - `/activation mention|always` — 그룹 활성화 전환(그룹 전용)
+
+CLI에서 토큰·비용 요약: `openclaw token` (일별 집계, `--provider`로 프로바이더 쿼터 포함). [CLI token](https://docs.openclaw.ai/cli/token) 참고.
 
 ## 앱 (선택)
 
